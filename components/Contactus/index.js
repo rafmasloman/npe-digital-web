@@ -1,9 +1,10 @@
+import Image from 'next/image';
 import Button from '../Button';
 import Gap from '../Gap';
 
 const Contactus = () => {
   return (
-    <div className="contact-us flex flex-col items-center">
+    <div className="contact-us flex flex-col items-center ">
       <h1 className="text-2xl  text-white  font-primary font-semibold text-center md:text-4xl lg:text-5xl xl:text-64px">
         Pengen buat aplikasi untuk project perusahaan anda?
       </h1>

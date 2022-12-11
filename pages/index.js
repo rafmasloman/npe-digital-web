@@ -13,6 +13,7 @@ import courseIcons from '../public/icons/course_ic.svg';
 import Gap from '../components/Gap';
 import ClientTestimoni from '../components/ClientTestimoni';
 import Contactus from '../components/Contactus';
+import Footer from '../components/Footer';
 
 // import project01 from '../public/'
 
@@ -144,8 +145,14 @@ export default function Home() {
 
       <Gap height="h-120px" />
 
-      <div className="bg-contact-us bg-cover bg-no-repeat px-6 py-10 lg:px-200px lg:py-32">
+      <div className="bg-contact-us bg-cover bg-fixed bg-no-repeat px-6 py-10 lg:px-200px lg:py-32">
         <Contactus />
+      </div>
+
+      <Gap height="h-120px" />
+
+      <div className="footer px-6 md:px-16 lg:px-100px">
+        <Footer />
       </div>
     </div>
   );
