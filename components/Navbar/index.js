@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import Service from '../../pages/service';
+import Projects from '../../pages/projects';
 
 const Navbar = () => {
   const [active, setActive] = useState(true);
@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="font-primary   px-6 mt-12 md:px-16  lg:mt-0 lg:flex lg:justify-between  lg:py-10 lg:px-100px ">
+    <div className="font-primary   px-6 mt-12 md:px-16  lg:mt-0 lg:flex lg:justify-between  lg:py-10 lg:px-100px container mx-auto">
       <div className="company-brand bg-white   flex justify-between items-center">
         <p className="company-name text-lg font-medium text-dark-blue-primary lg:text-2xl">
           NPE{' '}
@@ -57,7 +57,7 @@ const Navbar = () => {
           </li>
           <li className="nav-link mt-3 lg:mt-0 lg:pr-12">
             <Link
-              href="/contact"
+              href="/contactus"
               className="link text-sm text-gray-b1 lg:text-base"
             >
               Contact

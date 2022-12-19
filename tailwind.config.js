@@ -33,9 +33,11 @@ module.exports = {
         '50px': '50px',
         '100px': '100px',
         '120px': '120px',
+        '150px': '150px',
         '200px': '200px',
         '270px': '270px',
         '70px': '70px',
+        '400px': '360px',
       },
       borderWidth: {
         1.5: '1.75px',

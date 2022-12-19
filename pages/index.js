@@ -19,7 +19,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="mb-20 w-auto">
+    <div className="homepage w-auto ">
       <Navbar />
       <div className="hero px-6 flex flex-col mt-70px  items-center md:px-16 lg:px-40 xl:px-200px">
         <div className="hero-content flex flex-col items-center">
@@ -27,7 +27,7 @@ export default function Home() {
             We Create Projects,
             <br /> For your company
           </h1>
-          <p className="text-gray-b1 text-xs text-center w-3/4 font-secondary  mt-2.5 mb-9 md:text-sm xl:text-base md:w-7/12 lg:w-8/12 xl:w-3/5">
+          <p className="text-gray-b1 text-xs text-center w-3/4 font-secondary  mt-2.5 mb-9 md:text-sm xl:text-base md:w-7/12 lg:w-8/12 xl:w-3/6">
             Membantu meningkatkan kualitas perusahaan anda dengan layanan
             pembuatan aplikasi ataupun web dari kami, serta layanan untuk
             maintenance aplikasi anda dengan performa terbaik
@@ -35,7 +35,8 @@ export default function Home() {
         </div>
         <Button
           text="Get Started"
-          btnType="primary"
+          color="primary"
+          type="submit"
           action={(e) => {
             alert(e.target);
           }}
@@ -72,7 +73,7 @@ export default function Home() {
             title="Website"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam."
             urlImage={websiteIcons}
-            url="/websiteDetail"
+            url="/services/web"
             width={90}
             height={90}
             colSpan={1}
@@ -82,7 +83,7 @@ export default function Home() {
             title="Mobile Apps"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam."
             urlImage="/icons/mobile_ic.svg"
-            url="/mobileDetail"
+            url="/services/mobile"
             width={40}
             height={40}
             colSpan={1}
@@ -123,7 +124,14 @@ export default function Home() {
           />
         </div>
         <Gap height="h-14 lg:h-100px" />
-        <Button btnType="secondary" text="Lihat Semua" />
+        <Button
+          color="secondary"
+          text="Lihat Semua"
+          url="contactus"
+          action={(e) => {
+            console.log(e.target);
+          }}
+        />
       </div>
 
       <Gap height="h-120px" />
@@ -145,15 +153,13 @@ export default function Home() {
 
       <Gap height="h-120px" />
 
-      <div className="bg-contact-us bg-cover bg-fixed bg-no-repeat px-6 py-10 lg:px-200px lg:py-32">
-        <Contactus />
-      </div>
+      <Contactus />
 
       <Gap height="h-120px" />
 
-      <div className="footer px-6 md:px-16 lg:px-100px">
-        <Footer />
-      </div>
+      <Footer />
+
+      <Gap height="h-70px" />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import Gap from '../Gap';
 
 const Footer = () => {
   return (
-    <div className="lg:flex">
+    <div className="px-6 md:px-16 lg:px-100px lg:flex">
       <div className="flex-initial w-3/5 ">
         <h4 className="font-primary text-3xl font-semibold">
           NPE <span className="text-blue-primary">Digital</span>
@@ -34,7 +34,9 @@ const Footer = () => {
         {/* <Gap width="w-12" /> */}
         <FooterLink
           title="Quick Link"
-          linkNames={['Home', 'Services', 'Projects', 'About']}
+          linkNames={['Home', 'Projects', 'Teams', 'Contact']}
+          href={['/', '/projects', 'teams', '/contact']}
+          type="link"
         />
         {/* <Gap width="w-12" /> */}
         <FooterLink

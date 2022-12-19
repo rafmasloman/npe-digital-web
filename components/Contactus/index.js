@@ -4,7 +4,7 @@ import Gap from '../Gap';
 
 const Contactus = () => {
   return (
-    <div className="contact-us flex flex-col items-center ">
+    <div className="contact-us bg-contact-us bg-cover bg-fixed bg-no-repeat px-6 py-10 lg:px-200px lg:py-32 flex flex-col items-center ">
       <h1 className="text-2xl  text-white  font-primary font-semibold text-center md:text-4xl lg:text-5xl xl:text-64px">
         Pengen buat aplikasi untuk project perusahaan anda?
       </h1>
@@ -13,7 +13,7 @@ const Contactus = () => {
         untuk mewujudkan digitalisasi perusahaan semakin optimal
       </p>
       <Gap height="h-4 lg:h-12" />
-      <Button text="Buat Sekarang" btnType="primary" />
+      <Button text="Buat Sekarang" color="primary" />
     </div>
   );
 };
