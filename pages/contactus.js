@@ -46,10 +46,10 @@ const Contact = () => {
         </div> */}
         </div>
       </div>
-      {/* <Gap height="h-200px" />
+      <Gap height="h-200px" />
       <Gap height="h-200px" />
       <Footer />
-      <Gap height="h-70px" /> */}
+      <Gap height="h-70px" />
     </div>
   );
 };
