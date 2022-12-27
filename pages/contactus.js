@@ -46,8 +46,10 @@ const Contact = () => {
         </div> */}
         </div>
       </div>
-      <Gap height="h-200px" />
-      <Gap height="h-200px" />
+      <Gap height="h-64 lg:h-200px" />
+      <Gap height="h-64 lg:h-200px" />
+      <Gap height="h-64 lg:h-0" />
+      <Gap height="h-64 lg:h-0" />
       <Footer />
       <Gap height="h-70px" />
     </div>
