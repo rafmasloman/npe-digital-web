@@ -21,6 +21,7 @@ module.exports = {
       },
       colors: {
         'gray-b1': '#B1B1B1',
+        'gray-input': '#F0F0F0',
         'gray-testimoni': '#F6F7F9',
         'blue-primary': '#0062CD',
         'dark-blue-primary': '#1A233B',
@@ -56,6 +57,7 @@ module.exports = {
       },
       backgroundImage: {
         'contact-us': "url('/images/getintouch.png')",
+        'contact-us-page': "url('/images/contactus_bg.png')",
       },
     },
   },

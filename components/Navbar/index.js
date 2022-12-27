@@ -13,8 +13,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="font-primary   px-6 mt-12 md:px-16  lg:mt-0 lg:flex lg:justify-between  lg:py-10 lg:px-100px container mx-auto">
-      <div className="company-brand bg-white   flex justify-between items-center">
+    <div className="font-primary   px-6 pt-12 md:px-16  lg:mt-0 lg:flex lg:justify-between  lg:py-10 lg:px-100px container mx-auto">
+      <div className="company-brand  flex justify-between items-center">
         <p className="company-name text-lg font-medium text-dark-blue-primary lg:text-2xl">
           NPE{' '}
           <span className="company-name-secondary text-blue-primary">

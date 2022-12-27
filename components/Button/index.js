@@ -7,11 +7,11 @@ const Button = ({ text, color, height, action, type, url }) => {
       : 'border-2 border-blue-primary text-blue-primary font-medium hover:border-dark-blue-primary hover:text-dark-blue-primary hover:bg-white';
 
   return (
-    <div className="w-fit">
+    <div className="">
       {type === 'submit' ? (
         <button
           onClick={action}
-          className={`${btnColor} text-sm  rounded-lg px-5 py-2 xl:px-6 xl:py-3 xl:rounded-lg  font-primary xl:text-lg border-1.5 `}
+          className={`${btnColor} w-full text-sm  rounded-lg px-5 py-2 xl:px-6 xl:py-3 xl:rounded-lg  font-primary xl:text-lg border-1.5 `}
           type={type}
         >
           {text}

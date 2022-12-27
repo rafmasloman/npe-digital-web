@@ -6,9 +6,9 @@ import Navbar from '../components/Navbar';
 import ProjectCard from '../components/ProjectCard';
 import TeamCard from '../components/TeamCard';
 
-const Projects = () => {
+const Teams = () => {
   return (
-    <div className="projects container mx-auto w-auto">
+    <div className="teams container mx-auto w-auto">
       <Navbar />
 
       <Gap height="h-70px" />
@@ -61,4 +61,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Teams;
