@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Projects from '../../pages/projects';
 
@@ -11,6 +12,9 @@ const Navbar = () => {
     active === true ? setActive(!true) : setActive(true);
     active === true ? setHidden('h-auto') : setHidden('h-0 overflow-hidden');
   };
+
+  const router = useRouter();
+  // console.log(router.pathname);
 
   return (
     <div className="font-primary   px-6 pt-12 md:px-16  lg:mt-0 lg:flex lg:justify-between  lg:py-10 lg:px-100px container mx-auto">
@@ -34,7 +38,11 @@ const Navbar = () => {
           <li className="nav-link lg:pr-12">
             <Link
               href="/"
-              className="link active text-sm text-blue-primary font-medium lg:text-base"
+              className={`link active text-sm ${
+                router.pathname === '/'
+                  ? 'text-blue-primary font-medium'
+                  : 'text-gray-b1 font-normal'
+              }  lg:text-base`}
             >
               Home
             </Link>
@@ -42,7 +50,11 @@ const Navbar = () => {
           <li className="nav-link mt-3 lg:mt-0 lg:pr-12">
             <Link
               href="/projects"
-              className="link text-sm text-gray-b1 lg:text-base"
+              className={`link text-sm ${
+                router.pathname === '/projects'
+                  ? 'text-blue-primary font-medium'
+                  : 'text-gray-b1 font-normal'
+              } lg:text-base`}
             >
               Projects
             </Link>
@@ -50,7 +62,11 @@ const Navbar = () => {
           <li className="nav-link mt-3 lg:mt-0 lg:pr-12">
             <Link
               href="/teams"
-              className="link text-sm text-gray-b1 lg:text-base"
+              className={`link text-sm ${
+                router.pathname === '/teams'
+                  ? 'text-blue-primary font-medium'
+                  : 'text-gray-b1 font-normal'
+              } lg:text-base`}
             >
               Teams
             </Link>
@@ -58,7 +74,11 @@ const Navbar = () => {
           <li className="nav-link mt-3 lg:mt-0 lg:pr-12">
             <Link
               href="/contactus"
-              className="link text-sm text-gray-b1 lg:text-base"
+              className={`link text-sm ${
+                router.pathname === '/contactus'
+                  ? 'text-white font-medium'
+                  : 'text-gray-b1 font-normal'
+              } lg:text-base`}
             >
               Contact
             </Link>
