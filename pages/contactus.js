@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import Footer from '../components/Footer';
 import Form from '../components/Form';
@@ -24,9 +25,23 @@ const Contact = () => {
 
             <Gap height="h-5 lg:h-100px" />
             <div className="flex">
-              <Image src={'/icons/instagram_ic.svg'} width={36} height={36} />
-              <Gap width="w-8" />
-              <Image src={'/icons/facebook_ic.svg'} width={36} height={36} />
+              <Link href="https://www.linkedin.com/company/npe-digital/about/">
+                <Image
+                  src="/icons/linkedin_ic.svg"
+                  alt="Linkedin"
+                  className="facebook_icon mr-5"
+                  width={32}
+                  height={32}
+                />
+              </Link>
+              <Link href="https://www.instagram.com/npe.digital/">
+                <Image
+                  src="/icons/instagram_ic.svg"
+                  alt="Instagram"
+                  width={32}
+                  height={32}
+                />
+              </Link>
             </div>
             <Gap height="h-50px" />
           </div>

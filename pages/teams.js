@@ -1,11 +1,9 @@
 import Button from '../components/Button';
-import Contactus from '../components/Contactus';
+import Contactus from '../components/container/Contactus';
 import Footer from '../components/Footer';
 import Gap from '../components/Gap';
 import Navbar from '../components/Navbar';
-import ProjectCard from '../components/ProjectCard';
-import TeamCard from '../components/TeamCard';
-
+import OurTeams from '../components/container/OurTeams';
 const Teams = () => {
   return (
     <div className="teams container mx-auto w-auto">
@@ -27,32 +25,7 @@ const Teams = () => {
 
       <Gap height="h-70px" />
       {/* Teams  */}
-      <div className="px-6 md:px-16 lg:px-100px">
-        <h2 className="font-primary font-medium text-lg md:text-xl lg:text-2xl xl:text-4xl">
-          Meet Our Team
-        </h2>
-        <Gap height="h-50px" />
-        <div className=" grid md:grid-cols-2 lg:grid-cols-3  gap-8 ">
-          <TeamCard
-            name="Rafly Masloman"
-            role="Full Stack Developer"
-            imgUrl="/images/raffcodes.png"
-            col="start"
-          />
-          <TeamCard
-            name="Rafly Masloman"
-            role="Full Stack Developer"
-            imgUrl="/images/raffcodes.png"
-            col="center"
-          />
-          <TeamCard
-            name="Rafly Masloman"
-            role="Full Stack Developer"
-            imgUrl="/images/raffcodes.png"
-            col="end"
-          />
-        </div>
-      </div>
+      <OurTeams />
       <Gap height="h-120px" />
       <Contactus />
       <Gap height="h-120px" />

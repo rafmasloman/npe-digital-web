@@ -1,5 +1,6 @@
 import Button from '../components/Button';
-import Contactus from '../components/Contactus';
+import Contactus from '../components/container/Contactus';
+import ProjectFeatured from '../components/container/ProjectFeatured';
 import Footer from '../components/Footer';
 import Gap from '../components/Gap';
 import Navbar from '../components/Navbar';
@@ -23,32 +24,9 @@ const Projects = () => {
 
       {/* Projects Card */}
       <div className="projects-container  px-6 md:px-16 lg:px-100px ">
-        <div className="project-list grid gap-10 md:grid-cols-2 md:gap-7 xl:grid-cols-3 xl:gap-8 2xl:gap-24  justify-items-center">
-          <ProjectCard
-            bgUrl="bg-[url('/images/project-01.png')]"
-            name="Modern Furniture Shop"
-            year="2022"
-            category="Mobile Apps"
-            imgUrl="/icons/link.svg"
-            href="/projects/web"
-          />
-          <ProjectCard
-            bgUrl="bg-[url('/images/project-02.png')]"
-            name="Modern Furniture Shop"
-            year="2022"
-            category="Mobile Apps"
-            imgUrl="/icons/link.svg"
-            href="/projects/mobile"
-          />
-          <ProjectCard
-            bgUrl="bg-[url('/images/project-02.png')]"
-            name="Modern Furniture Shop"
-            year="2022"
-            category="Mobile Apps"
-            imgUrl="/icons/link.svg"
-            href="/projects/mobile"
-          />
-        </div>
+        {/* <div className="project-list grid gap-10 md:grid-cols-2 md:gap-7 xl:grid-cols-3 xl:gap-8 2xl:gap-24  justify-items-center"> */}
+        <ProjectFeatured category="" />
+        {/* </div> */}
       </div>
 
       <Gap height="h-120px" />

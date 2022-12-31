@@ -65,19 +65,23 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="social-media flex mt-5  lg:mt-0 ">
-          <Image
-            src="/icons/facebook_ic.svg"
-            alt="Facebook"
-            className="facebook_icon mr-5"
-            width={28}
-            height={28}
-          />
-          <Image
-            src="/icons/instagram_ic.svg"
-            alt="Instagram"
-            width={28}
-            height={28}
-          />
+          <Link href="https://www.linkedin.com/company/npe-digital/about/">
+            <Image
+              src="/icons/linkedin_ic.svg"
+              alt="Linkedin"
+              className="facebook_icon mr-5"
+              width={28}
+              height={28}
+            />
+          </Link>
+          <Link href="https://www.instagram.com/npe.digital/">
+            <Image
+              src="/icons/instagram_ic.svg"
+              alt="Instagram"
+              width={28}
+              height={28}
+            />
+          </Link>
         </div>
       </div>
     </div>

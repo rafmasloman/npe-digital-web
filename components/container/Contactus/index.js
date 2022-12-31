@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Button from '../Button';
-import Gap from '../Gap';
+import Button from '../../Button';
+import Gap from '../../Gap';
 
 const Contactus = () => {
   return (
@@ -13,7 +13,7 @@ const Contactus = () => {
         untuk mewujudkan digitalisasi perusahaan semakin optimal
       </p>
       <Gap height="h-4 lg:h-12" />
-      <Button text="Buat Sekarang" color="primary" />
+      <Button text="Buat Sekarang" color="primary" url="/contactus" />
     </div>
   );
 };

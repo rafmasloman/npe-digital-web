@@ -1,13 +1,23 @@
 import Image from 'next/image';
+import { useCallback, useEffect, useState } from 'react';
 import Button from '../../components/Button';
-import Contactus from '../../components/Contactus';
+import Contactus from '../../components/container/Contactus';
 import Footer from '../../components/Footer';
 import Gap from '../../components/Gap';
 import Navbar from '../../components/Navbar';
 import ProjectCard from '../../components/ProjectCard';
 import TeamCard from '../../components/TeamCard';
-
+import { getProjects } from '../../config/api/client';
 const Mobile = () => {
+  const [projectList, setProjectList] = useState([]);
+  const getProjectsList = useCallback(async () => {
+    const data = await getProjects();
+    setProjectList(data);
+  }, [getProjects]);
+
+  useEffect(() => {
+    getProjectsList();
+  }, []);
   return (
     <div className="container mx-auto">
       <Navbar />
@@ -44,34 +54,30 @@ const Mobile = () => {
         </h2>
         <Gap height="h-50px" />
         <div className="project-list grid gap-10 md:grid-cols-2 md:gap-7 xl:grid-cols-3 xl:gap-8 2xl:gap-24  justify-items-center ">
-          <ProjectCard
-            bgUrl="bg-[url('/images/project-02.png')]"
-            name="Modern Furniture Shop"
-            year="2022"
-            category="Mobile Apps"
-            imgUrl="/icons/link.svg"
-            href="/"
-          />
-          <ProjectCard
-            bgUrl="bg-[url('/images/project-02.png')]"
-            name="Modern Furniture Shop"
-            year="2022"
-            category="Mobile Apps"
-            imgUrl="/icons/link.svg"
-            href="/"
-          />
-          <ProjectCard
-            bgUrl="bg-[url('/images/project-02.png')]"
-            name="Modern Furniture Shop"
-            year="2022"
-            category="Mobile Apps"
-            imgUrl="/icons/link.svg"
-            href="/"
-          />
+          {console.log(projectList)}
+          {projectList.map((project) => {
+            if (
+              project.category.name
+                .toLowerCase()
+                .includes('Mobile Apps'.toLowerCase())
+            ) {
+              return (
+                <ProjectCard
+                  key={project._id}
+                  bgUrl={`bg-[url('/images/project-02.png')]`}
+                  name={project.title}
+                  year={project.year}
+                  category={project.category.name}
+                  imgUrl="/icons/link.svg"
+                  href={`/project/detail/${project._id}`}
+                />
+              );
+            }
+          })}
         </div>
         <Gap height="h-70px" />
         <div className="flex justify-center">
-          <Button type="submit" text="Lihat Semua" color="secondary" />
+          <Button url="/projects" text="Lihat Semua" color="secondary" />
         </div>
       </div>
       <Gap height="h-120px" />

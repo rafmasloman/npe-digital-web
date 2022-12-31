@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
 const ProjectCard = ({ name, year, category, bgUrl, imgUrl, href }) => {
+  // const ReactPlayer = dynamic(() => import('react-player/lazy'), {
+  //   ssr: false,
+  // });
+
   return (
     <Link href={`${href}`} className="w-full">
       <button
@@ -18,15 +23,15 @@ const ProjectCard = ({ name, year, category, bgUrl, imgUrl, href }) => {
             </p>
           </div>
           <div className="bg-dark-blue-primary w-fit h-fit rounded-md ">
-            <Link href={`${href}`} className="bg-dark-blue-primary">
-              <Image
-                src={imgUrl}
-                width={27}
-                height={27}
-                className="p-1.5"
-                alt={name}
-              />
-            </Link>
+            {/* <Link href={`${href}`} className="bg-dark-blue-primary"> */}
+            <Image
+              src={imgUrl}
+              width={27}
+              height={27}
+              className="p-1.5"
+              alt={name}
+            />
+            {/* </Link> */}
           </div>
         </div>
       </button>

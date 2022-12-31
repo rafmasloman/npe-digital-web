@@ -1,11 +1,40 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Button from '../Button';
 import Gap from '../Gap';
 import Input from '../Input';
+import emailjs from 'emailjs-com';
+import { useRouter } from 'next/router';
 
 const Form = () => {
+  const form = useRef();
+  const router = useRouter();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        'service_g3u1rb4',
+        'template_2ty4yrb',
+        form.current,
+        'p0aXtevYxSNyapwIa',
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          router.push('/');
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+  };
+
   return (
-    <form className="bg-white rounded-2xl shadow-xl  absolute left-0 right-0 0 top-24 p-8">
+    <form
+      className="bg-white rounded-2xl shadow-xl  absolute left-0 right-0 0 top-24 p-8"
+      ref={form}
+      onSubmit={sendEmail}
+    >
       <h4 className="font-primary text-2xl font-medium">Konsultasi form</h4>
       <Gap height="h-50px" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 font-secondary">
@@ -58,7 +87,7 @@ const Form = () => {
           placeholder="Tulis pesan "
           forLabel="message"
           style="px-4 py-2.5 rounded-md h-24"
-          label="No. Hp"
+          label="Apa yang anda ingin konsultasikan?"
           width={64}
           span={2}
           type="message"

@@ -47,9 +47,13 @@ const Input = ({
         }
       }} */}
       {type === 'select' ? (
-        <select className="bg-gray-input px-4 py-1.5 rounded-md">
+        <select className="bg-gray-input px-4 py-1.5 rounded-md" name={name}>
           {option.map((option) => {
-            return <option key={option}>{option}</option>;
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
           })}
         </select>
       ) : type === 'input' ? (
