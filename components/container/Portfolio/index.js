@@ -30,6 +30,7 @@ const Portfolio = () => {
               name={project.title}
               desc={project.description}
               imgUrl="/images/project-01.png"
+              url={project.urlProject}
             />
           );
         })}

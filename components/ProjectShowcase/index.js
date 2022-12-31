@@ -38,7 +38,7 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
             </h4>
           </div>
           <div className="font-primary flex font-medium text-sm text-dark-blue-primary lg:text-lg ">
-            <Link href="/" className="flex">
+            <Link href={`${url}`} className="flex">
               <Image
                 src="/icons/link_secondary.svg"
                 className="mr-3"
@@ -55,7 +55,6 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
             {desc}
           </p>
         </div>
-        {/* <Button /> */}
       </div>
     </div>
   ) : (
@@ -80,7 +79,7 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
           </p>
         </div>
         <Link
-          href="/"
+          href={`${url}`}
           className="flex justify-center items-center text-xl font-primary "
         >
           <Image

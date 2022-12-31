@@ -28,7 +28,7 @@ const ProjectFeatured = ({ category }) => {
               year={project.year}
               category={project.category.name}
               imgUrl="/icons/link.svg"
-              href={`/project/detail`}
+              href={`/project/detail/${project._id}`}
             />
           );
         }
@@ -45,7 +45,7 @@ const ProjectFeatured = ({ category }) => {
               year={project.year}
               category={project.category.name}
               imgUrl="/icons/link.svg"
-              href={`/project/detail`}
+              href={`/project/detail/${project._id}`}
             />
           );
         } else {
