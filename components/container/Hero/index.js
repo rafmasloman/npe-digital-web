@@ -5,6 +5,7 @@ import heroImage from '../../../public/images/brainstorming.png';
 import axios from 'axios';
 const Hero = () => {
   const [projectList, setProjectList] = useState([]);
+
   const consumeAPI = async () => {
     const data = await axios.get(
       'http://localhost:8000/api/v1/client/projects',
@@ -14,6 +15,13 @@ const Hero = () => {
   useEffect(() => {
     consumeAPI();
   }, []);
+
+  const ScrollStarted = () => {
+    window.scrollTo({
+      top: 120,
+      behavior: 'smooth',
+    });
+  };
   return (
     <div className="hero px-6 flex flex-col mt-70px  items-center md:px-16 lg:px-40 xl:px-200px">
       <div className="hero-content flex flex-col items-center">
@@ -31,9 +39,7 @@ const Hero = () => {
         text="Get Started"
         color="primary"
         type="submit"
-        action={(e) => {
-          alert(e.target);
-        }}
+        action={ScrollStarted}
       />
       <Image
         src={heroImage}

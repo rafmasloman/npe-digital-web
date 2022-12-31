@@ -42,7 +42,7 @@ const Navbar = () => {
                 router.pathname === '/'
                   ? 'text-blue-primary font-medium'
                   : 'text-gray-b1 font-normal'
-              }  lg:text-base`}
+              }  lg:text-base hover:text-blue-primary `}
             >
               Home
             </Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 router.pathname === '/projects'
                   ? 'text-blue-primary font-medium'
                   : 'text-gray-b1 font-normal'
-              } lg:text-base`}
+              } lg:text-base hover:text-blue-primary `}
             >
               Projects
             </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
                 router.pathname === '/teams'
                   ? 'text-blue-primary font-medium'
                   : 'text-gray-b1 font-normal'
-              } lg:text-base`}
+              } lg:text-base hover:text-blue-primary `}
             >
               Teams
             </Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
                 router.pathname === '/contactus'
                   ? 'text-white font-medium'
                   : 'text-gray-b1 font-normal'
-              } lg:text-base`}
+              } lg:text-base hover:text-blue-primary `}
             >
               Contact
             </Link>
