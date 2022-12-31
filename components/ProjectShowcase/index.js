@@ -6,7 +6,7 @@ import Gap from '../Gap';
 
 const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
   return type === 'full' ? (
-    <div className="w-full">
+    <div className="w-full mb-20">
       <h3 className="name font-primary md:text-2xl lg:text-4xl font-semibold text-dark-blue-primary">
         {name}
       </h3>
@@ -59,7 +59,7 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
       </div>
     </div>
   ) : (
-    <div className="w-auto">
+    <div className="w-auto mb-20">
       {/* {projectList.projects.map((project) => {
         console.log(project);
       })} */}
@@ -70,7 +70,7 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
         height="0"
         className="w-auto md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg desktop:max-w-screen-xl"
       />
-      <div className="project-content">
+      <div className="project-content flex justify-between">
         <div className="container-text mt-5">
           <h3 className="name font-primary md:text-2xl lg:text-4xl font-semibold text-dark-blue-primary">
             {name}
@@ -79,6 +79,19 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
             {desc}
           </p>
         </div>
+        <Link
+          href="/"
+          className="flex justify-center items-center text-xl font-primary "
+        >
+          <Image
+            src="/icons/link_secondary.svg"
+            className="mr-3"
+            width={30}
+            height={30}
+            alt="Link Icons"
+          />
+          Visit Website
+        </Link>
         {/* <Button /> */}
       </div>
     </div>
