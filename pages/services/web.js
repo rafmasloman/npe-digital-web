@@ -64,7 +64,7 @@ const Mobile = () => {
               return (
                 <ProjectCard
                   key={project._id}
-                  bgUrl={`bg-[url('/images/project-01.png')]`}
+                  bgUrl={`${process.env.NEXT_PUBLIC_IMG}/${project.thumbnail}`}
                   name={project.title}
                   year={project.year}
                   category={project.category.name}

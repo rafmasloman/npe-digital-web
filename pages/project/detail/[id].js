@@ -40,7 +40,7 @@ const Detail = () => {
           name={projectDetail.title}
           client={projectDetail.client}
           year={projectDetail.year}
-          imgUrl="/images/project-02.png"
+          imgUrl={`${process.env.NEXT_PUBLIC_IMG}/${projectDetail.thumbnail}`}
           desc={projectDetail.description}
         />
       </div>

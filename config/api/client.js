@@ -1,5 +1,14 @@
 import axios from 'axios';
 
+const landingPage = async () => {
+  const PUBLIC_API = process.env.NEXT_PUBLIC_API;
+  const API_VERSION = 'api/v1';
+  const ENDPOINT = 'client/';
+  const response = await axios.get(`${PUBLIC_API}/${API_VERSION}/${ENDPOINT}`);
+  const result = response.data;
+  console.log(result);
+  return result;
+};
 const getProjects = async () => {
   const PUBLIC_API = process.env.NEXT_PUBLIC_API;
   const API_VERSION = 'api/v1';

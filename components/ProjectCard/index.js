@@ -1,20 +1,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
+import testImg from '../../public/images/project-02.png';
 const ProjectCard = ({ name, year, category, bgUrl, imgUrl, href }) => {
-  // const ReactPlayer = dynamic(() => import('react-player/lazy'), {
-  //   ssr: false,
-  // });
-
   return (
-    <Link href={`${href}`} className="w-full">
+    <Link href={`${href}`} className="w-full ">
       <button
-        className={`${bgUrl} flex flex-col justify-end bg-cover bg-left-top w-full h-60  bg-no-repeat px-5 pb-3 rounded-2xl  md:pb-6  lg:h-80`}
+        // style={{
+        //   backgroundImage: `url({${testImg}})`,
+        //   width: '100%',
+        //   height: '100%',
+        // }}
+        className={` flex flex-col relative justify-end   bg-cover bg-left-top w-full h-60 bg-no-repeat px-5 pb-3 rounded-2xl  md:pb-6  lg:h-80`}
       >
-        <div className="flex justify-between w-full drop-shadow-xl bg-white  items-center px-4 py-3 rounded-xl">
+        <Image
+          alt={name}
+          src={bgUrl}
+          width={400}
+          height={400}
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
+          className="absolute left-0 top-0 rounded-2xl"
+        />
+        <div className="flex justify-between  w-full drop-shadow-xl bg-white  items-center px-4 py-2.5 rounded-xl">
           <div className="font-primary flex flex-col justify-start flex-1 ">
-            <span className="text-blue-primary   text-left text-sm font-medium">
+            <span className="text-blue-primary text-left text-sm font-medium">
               {year}
             </span>
             <h4 className="font-semibold text-left">{name}</h4>

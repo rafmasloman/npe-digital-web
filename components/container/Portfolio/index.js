@@ -29,7 +29,7 @@ const Portfolio = () => {
               key={project._id}
               name={project.title}
               desc={project.description}
-              imgUrl="/images/project-01.png"
+              imgUrl={`${process.env.NEXT_PUBLIC_IMG}/${project.thumbnail}`}
               url={project.urlProject}
             />
           );
