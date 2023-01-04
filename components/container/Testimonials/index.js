@@ -1,6 +1,13 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import ClientTestimoni from '../../ClientTestimoni';
 import { getTestimonials } from '../../../config/api/client';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 const Testimonials = () => {
   const [testimoni, setTestimoni] = useState([]);
@@ -14,36 +21,25 @@ const Testimonials = () => {
     getClientTestimoni();
   }, []);
 
-  // const renderTestimoni = () => {
-  //   return testimoni.filter((testi, i) => {
-  //     return i === testimoniIndex ? (
-  //       <ClientTestimoni
-  //         key={testi._id}
-  //         name={testi.clientName}
-  //         from={testi.clientFrom}
-  //         clientSay={testi.message}
-  //       />
-  //     ) : (
-  //       ''
-  //     );
-  //   });
-  // };
+  // const swiper = new Swiper('.swiper', {
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  // });
 
-  const nextSlide = () => {
-    return (testimoniIndex =
-      testimoniIndex === testimoni.length - 1
-        ? 0
-        : setTestimoniIndex(testimoniIndex + 1));
-  };
+  // const nextSlide = () => {
+  //   const newIndex =
+  //     testimoniIndex === testimoni.length - 1 ? 0 : testimoniIndex + 1;
+  //   setTestimoniIndex(newIndex);
+  // };
 
   // const previousSlide = () => {
-  //   let count =
-  //     testimoniIndex < 0
-  //       ? testimoni.length - 1
-  //       : setTestimoniIndex(testimoniIndex - 1);
-  //   return count;
+  //   const newIndex =
+  //     testimoniIndex === 0 ? testimoni.length - 1 : testimoniIndex - 1;
+  //   setTestimoniIndex(newIndex);
   // };
-
+  SwiperCore.use([Navigation, Pagination, Autoplay]);
   return (
     <div className="testimonials flex flex-col items-center px-6 md:px-100px lg:px-120px ">
       <span className="font-primary text-sm text-gray-b1 text-center">
@@ -53,8 +49,7 @@ const Testimonials = () => {
         Pendapat <span className="text-blue-primary">Klien</span> <br /> tentang
         kami
       </h2>
-      <div className="lg:flex  bg-red-500 w-full">
-        {testimoni.map((testi, index) => {
+      {/* {testimoni.map((testi, index) => {
           if (testimoniIndex === index) {
             return (
               <ClientTestimoni
@@ -65,24 +60,54 @@ const Testimonials = () => {
               />
             );
           }
+        })} */}
+      <Swiper
+        className=" w-full container mx-auto"
+        slidesPerView={1}
+        navigation={true}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 8000,
+        }}
+      >
+        {testimoni.map((testi, index) => {
+          return (
+            <SwiperSlide key={testi.id} className="lg:flex lg:justify-center  ">
+              <ClientTestimoni
+                name={testi.clientName}
+                from={testi.clientFrom}
+                clientSay={testi.message}
+              />
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </SwiperSlide>
+          );
         })}
-        <button
+      </Swiper>
+
+      {/* <button
           onClick={() => {
             nextSlide();
-            console.log(testimoniIndex);
+            console.log('Bertambah ', testimoniIndex);
           }}
         >
           Tambah
         </button>
-        <button>Kurang</button>
-        {/* {renderTestimoni()} */}
-        {/* <ClientTestimoni
+        <button
+          onClick={() => {
+            previousSlide();
+            console.log('Berkurang ', testimoniIndex);
+          }}
+        >
+          Kurang
+        </button> */}
+      {/* {renderTestimoni()} */}
+      {/* <ClientTestimoni
           key={testimoni[testimoniIndex]._id}
           name={testimoni[testimoniIndex].clientName}
           from={testimoni[testimoniIndex].clientFrom}
           clientSay={testimoni[testimoniIndex].message}
         /> */}
-      </div>
     </div>
   );
 };
