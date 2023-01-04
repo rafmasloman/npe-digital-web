@@ -36,13 +36,13 @@ const Testimonials = () => {
         : setTestimoniIndex(testimoniIndex + 1));
   };
 
-  const previousSlide = () => {
-    let count =
-      testimoniIndex < 0
-        ? testimoni.length - 1
-        : setTestimoniIndex(testimoniIndex - 1);
-    return count;
-  };
+  // const previousSlide = () => {
+  //   let count =
+  //     testimoniIndex < 0
+  //       ? testimoni.length - 1
+  //       : setTestimoniIndex(testimoniIndex - 1);
+  //   return count;
+  // };
 
   return (
     <div className="testimonials flex flex-col items-center px-6 md:px-100px lg:px-120px ">
