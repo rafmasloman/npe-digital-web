@@ -4,9 +4,20 @@ import Footer from '../components/Footer';
 import Gap from '../components/Gap';
 import Navbar from '../components/Navbar';
 import OurTeams from '../components/container/OurTeams';
+import Head from 'next/head';
 const Teams = () => {
   return (
     <div className="teams container mx-auto w-auto">
+      <Head>
+        <title>
+          Our Teams - Bangun Aplikasi anda dengan team yang berpengalaman di
+          bidangnya
+        </title>
+        <meta
+          name="description"
+          content="NPE Digital Teams dengan member yang memiliki jam terbang luas"
+        />
+      </Head>
       <Navbar />
 
       <Gap height="h-70px" />
@@ -16,9 +27,10 @@ const Teams = () => {
             <span className="text-blue-primary">NPE Digital</span> Team
           </h1>
           <p className="text-gray-b1 text-xs font-secondary w-2/5  mt-2.5 mb-9 md:text-sm xl:text-base   ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis, lectus consectetur adipiscing elit
-            ut aliquam, purus sit amet luctus venenatis, lectus
+            Kami Tim NPE Digital hadir untuk menyediakan jasa layanan digital
+            secara profesional dengan berbagai pengalaman kami dan pengembangan
+            sumber daya manusia secara berkala untuk menciptakan tim yang
+            berkualitas.
           </p>
         </div>
       </div>

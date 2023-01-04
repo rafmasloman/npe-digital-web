@@ -20,14 +20,13 @@ const OurTeams = () => {
       </h2>
       <Gap height="h-50px" />
       <div className=" grid md:grid-cols-2 lg:grid-cols-3  gap-8 ">
-        {console.log(ourTeams[0])}
         {ourTeams.map((team) => {
           return (
             <TeamCard
               key={team._id}
               name={team.name}
               role={team.role.name}
-              imgUrl="/images/raffcodes.png"
+              imgUrl={`${process.env.NEXT_PUBLIC_IMG}/teams/${team.image}`}
               col="start"
             />
           );

@@ -3,6 +3,7 @@ import ProjectShowcase from '../../ProjectShowcase';
 import Gap from '../../Gap';
 import Button from '../../Button';
 import { getProjects } from '../../../config/api/client';
+import CategoriesProject from '../../CategoriesProject';
 
 const Portfolio = () => {
   const [projectList, setProjectList] = useState([]);
@@ -22,14 +23,15 @@ const Portfolio = () => {
           Company <span className="text-blue-primary">Portfolio</span>
         </h2>
       </div>
-      <div className="project-list w-full flex flex-col items-center">
+
+      <div className="project-list container mx-auto w-full flex flex-col items-center">
         {projectList.map((project) => {
           return (
             <ProjectShowcase
               key={project._id}
               name={project.title}
               desc={project.description}
-              imgUrl={`${process.env.NEXT_PUBLIC_IMG}/${project.thumbnail}`}
+              imgUrl={`${process.env.NEXT_PUBLIC_IMG}/projects/${project.thumbnail}`}
               url={project.urlProject}
             />
           );
@@ -42,7 +44,7 @@ const Portfolio = () => {
           imgUrl="/images/project-02.png"
         /> */}
       </div>
-      <Gap height="h-14 lg:h-100px" />
+      <Gap height=" lg:h-100px" />
       <Button
         color="secondary"
         text="Lihat Semua"

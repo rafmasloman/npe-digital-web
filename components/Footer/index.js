@@ -5,7 +5,7 @@ import Gap from '../Gap';
 
 const Footer = () => {
   return (
-    <div className="px-6 md:px-16 lg:px-100px lg:flex">
+    <div className="container mx-auto px-6 md:px-16 lg:px-100px lg:flex">
       <div className="flex-initial w-3/5 ">
         <h4 className="font-primary text-3xl font-semibold">
           NPE <span className="text-blue-primary">Digital</span>
@@ -48,14 +48,14 @@ const Footer = () => {
           title="Contact"
           linkNames={[
             'Email : npedigital@gmail.com',
-            'No.Telp : +628213229112',
+            'No.Telp : +6285342578304',
           ]}
           column="col-span-2"
         />
 
         <FooterLink
           title="Jam Kerja"
-          linkNames={['Senin-Jumat 00:00-24:00']}
+          linkNames={['Senin-Minggu 00:00-24:00']}
           column="col-span-2"
         />
       </div>

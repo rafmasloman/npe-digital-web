@@ -24,7 +24,7 @@ const Services = () => {
       <div className="all-service flex flex-col lg:flex-row lg:justify-center  items-center w-full ">
         <ServiceCard
           title="Website"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam."
+          content="Menjadi solusi bagi perusahaan dalam mengembangkan bisnisnya melalui layanan berbasis website yang informatif dan inovatif"
           urlImage={websiteIcons}
           url="/services/web"
           width={90}
@@ -34,7 +34,7 @@ const Services = () => {
         <Gap width="w-200px" />
         <ServiceCard
           title="Mobile Apps"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam."
+          content="Fleksibilitas layanan dapat dijangkau dengan menggunakan aplikasi mobile sehingga memudahkan akses pengguna bisnis anda"
           urlImage="/icons/mobile_ic.svg"
           url="/services/mobile"
           width={40}
@@ -44,7 +44,7 @@ const Services = () => {
         <Gap width="w-200px" />
         <ServiceCard
           title="UI/UX Design"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam."
+          content="Membangun fitur dan aspek visual yang dapat menciptakan pengalaman menyenangkan dalam penggunaan produk bisnis anda "
           urlImage={uiuxIcons}
           url="/services/uiux"
           width={90}

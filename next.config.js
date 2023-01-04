@@ -2,7 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['43.218.46.232'],
+    domains: ['api.npedigihouse.tech'],
+  },
+  httpAgentOptions: {
+    keepAlive: false,
   },
 };
 

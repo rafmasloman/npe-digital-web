@@ -58,7 +58,7 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
       </div>
     </div>
   ) : (
-    <div className="w-auto mb-20">
+    <div className="w-full mb-20">
       {/* {projectList.projects.map((project) => {
         console.log(project);
       })} */}
@@ -67,20 +67,20 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
         alt="Project Showcase"
         width="1440"
         height="0"
-        className="w-auto md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg desktop:max-w-screen-xl"
+        className="w-auto "
       />
-      <div className="project-content flex justify-between">
-        <div className="container-text mt-5">
-          <h3 className="name font-primary md:text-2xl lg:text-4xl font-semibold text-dark-blue-primary">
+      <div className="project-content flex flex-col md:flex-row justify-between">
+        <div className="container-text pt-5 w-fit flex-1">
+          <h3 className="name  font-primary md:text-2xl lg:text-4xl font-semibold text-dark-blue-primary">
             {name}
           </h3>
-          <p className="description text-sm lg:text-base md:w-1/2 lg:w-5/12 mt-1 text-gray-b1 font-secondary">
+          <p className="description  text-sm lg:text-base md:w-1/2 lg:w-5/12 mt-2 text-gray-b1 font-secondary">
             {desc}
           </p>
         </div>
         <Link
           href={`${url}`}
-          className="flex justify-center items-center text-xl font-primary "
+          className="flex  items-center text-base mt-4 flex-2 lg:mt-0 lg:text-xl font-primary "
         >
           <Image
             src="/icons/link_secondary.svg"

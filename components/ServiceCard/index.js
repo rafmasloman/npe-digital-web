@@ -16,7 +16,7 @@ const ServiceCard = ({
 
   return (
     <div
-      className={`card flex flex-col items-center rounded-2xl hover:border-2 w-fit h-fit mt-8 px-5 drop-shadow-card-shadow bg-white hover:border-blue-primary py-30px  lg:w-30% xl:w-300 xl:mt-70px`}
+      className={`card flex flex-col items-center rounded-2xl border-2 w-full h-fit mt-8  drop-shadow-card-shadow border-transparent bg-white hover:border-blue-primary  py-30px md:w-3/5  lg:w-full  xl:mt-70px`}
       onMouseEnter={() => setShown(!false)}
       onMouseLeave={() => setShown(false)}
     >
@@ -31,20 +31,18 @@ const ServiceCard = ({
         <h3 className="service-tye font-primary font-medium text-xl">
           {title}
         </h3>
-        <p className="text-center text-sm md:text-base text-gray-b1 font-secondary w-3/5 md:w-3/4  desktop:w-3/5 mt-2 ">
+        <p className="text-center text-sm md:text-base text-gray-b1 font-secondary w-3/4 lg:w-11/12  desktop:w-4/6 mt-2 ">
           {content}
         </p>
 
-        {isShown && (
+        {/* {isShown && (
           <Link
-            className={
-              'underline  text-blue-primary text-sm font-secondary font-medium mt-6'
-            }
+            className={`underline  text-blue-primary text-sm font-secondary  transition font-medium mt-6`}
             href={url}
           >
             Selengkapnya
           </Link>
-        )}
+        )} */}
       </div>
     </div>
   );

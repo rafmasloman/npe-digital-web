@@ -49,6 +49,7 @@ module.exports = {
       },
       width: {
         '30%': '31.75%',
+        '50%': '50%',
       },
       screens: {
         desktop: '1440px',

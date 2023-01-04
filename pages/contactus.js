@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -10,6 +11,12 @@ const Contact = () => {
   return (
     <div className="container mx-auto">
       <div className="bg-contact-us-page bg-cover  bg-fixed bg-no-repeat bg-center w-full">
+        <Head>
+          <title>
+            Contact NPE - Hubungi kami jika membutuhkan penjelasan langsung dari
+            tim
+          </title>
+        </Head>
         <Navbar />
         <Gap height="h-70px" />
         <div className="hero  lg:flex px-6 md:px-16 lg:px-100px lg:flex-row ">
