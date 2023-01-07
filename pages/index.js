@@ -17,6 +17,7 @@ export default function Home() {
   return (
     <div className="homepage w-auto ">
       <Head>
+        <link rel="npe icon" href="/illustrations/logonpe.png" />
         <title>NPE Digital - Make your Digital Company</title>
         <meta name="description" content="" />
       </Head>
