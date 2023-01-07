@@ -4,8 +4,6 @@ import Gap from '../Gap';
 import Input from '../Input';
 import emailjs from 'emailjs-com';
 import { useRouter } from 'next/router';
-import { Modal, Button, Group } from '@mantine/core';
-import { showNotification } from '@mantine/notifications';
 import Toast from '../Toast';
 
 const Form = () => {
@@ -37,7 +35,7 @@ const Form = () => {
   };
 
   return (
-    <>  
+    <>
       {success === true ? <Toast /> : ''}
       {/* <Toast /> */}
       <form
