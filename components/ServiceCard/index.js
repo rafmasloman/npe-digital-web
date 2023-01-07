@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import Gap from '../Gap';
 
 const ServiceCard = ({
   url,
@@ -16,9 +17,9 @@ const ServiceCard = ({
 
   return (
     <div
-      className={`card flex flex-col items-center rounded-2xl border-2 w-full h-fit mt-8  drop-shadow-card-shadow border-transparent bg-white hover:border-blue-primary  py-30px md:w-3/5  lg:w-full  xl:mt-70px`}
-      onMouseEnter={() => setShown(!false)}
-      onMouseLeave={() => setShown(false)}
+      className={`card flex flex-col  items-center rounded-2xl border-2 hover:border-2 hover:scale-110 transition duration-300 w-full h-fit mt-8  drop-shadow-card-shadow border-transparent bg-white hover:border-blue-primary   py-30px md:w-3/5  lg:w-full  xl:mt-70px`}
+      // onMouseEnter={() => setShown(!false)}
+      // onMouseLeave={() => setShown(false)}
     >
       <Image
         src={urlImage}
@@ -34,15 +35,13 @@ const ServiceCard = ({
         <p className="text-center text-sm md:text-base text-gray-b1 font-secondary w-3/4 lg:w-11/12  desktop:w-4/6 mt-2 ">
           {content}
         </p>
-
-        {/* {isShown && (
-          <Link
-            className={`underline  text-blue-primary text-sm font-secondary  transition font-medium mt-6`}
-            href={url}
-          >
-            Selengkapnya
-          </Link>
-        )} */}
+        <Gap height="h-30px" />
+        <Link
+          className={`underline  text-blue-primary text-sm font-secondary  font-medium `}
+          href={url}
+        >
+          Selengkapnya
+        </Link>
       </div>
     </div>
   );

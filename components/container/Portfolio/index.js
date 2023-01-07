@@ -4,6 +4,7 @@ import Gap from '../../Gap';
 import Button from '../../Button';
 import { getProjects } from '../../../config/api/client';
 import CategoriesProject from '../../CategoriesProject';
+import { Fade } from 'react-reveal';
 
 const Portfolio = () => {
   const [projectList, setProjectList] = useState([]);
@@ -27,13 +28,15 @@ const Portfolio = () => {
       <div className="project-list container mx-auto w-full flex flex-col items-center">
         {projectList.map((project) => {
           return (
-            <ProjectShowcase
-              key={project._id}
-              name={project.title}
-              desc={project.description}
-              imgUrl={`${process.env.NEXT_PUBLIC_IMG}/projects/${project.thumbnail}`}
-              url={project.urlProject}
-            />
+            <Fade key={project._id}>
+              <ProjectShowcase
+                key={project._id}
+                name={project.title}
+                desc={project.description}
+                imgUrl={`${process.env.NEXT_PUBLIC_IMG}/projects/${project.thumbnail}`}
+                url={project.urlProject}
+              />
+            </Fade>
           );
         })}
 

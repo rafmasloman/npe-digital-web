@@ -62,7 +62,7 @@ const Testimonials = () => {
           }
         })} */}
       <Swiper
-        className=" w-full container mx-auto"
+        className=" w-full container mx-auto "
         slidesPerView={1}
         navigation={true}
         pagination={{ clickable: true }}

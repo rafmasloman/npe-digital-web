@@ -3,14 +3,14 @@ import Link from 'next/link';
 import testImg from '../../public/images/project-02.png';
 const ProjectCard = ({ name, year, category, bgUrl, imgUrl, href }) => {
   return (
-    <Link href={`${href}`} className="w-full ">
+    <Link href={`${href}`} className="w-full group">
       <button
         // style={{
         //   backgroundImage: `url({${testImg}})`,
         //   width: '100%',
         //   height: '100%',
         // }}
-        className={` flex flex-col relative justify-end   bg-cover bg-left-top w-full h-60 bg-no-repeat px-5 pb-3 rounded-2xl  md:pb-6  lg:h-80`}
+        className={` flex flex-col relative justify-end   bg-cover bg-left-top w-full h-60 bg-no-repeat px-5 pb-3  group-hover:scale-90 transition duration-300   md:pb-6  lg:h-80`}
       >
         <Image
           alt={name}
