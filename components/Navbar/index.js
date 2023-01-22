@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Projects from '../../pages/projects';
 import Gap from '../Gap';
 
-const Navbar = () => {
+const Navbar = ({ mode }) => {
   const [active, setActive] = useState(true);
   const [hidden, setHidden] = useState('h-0 overflow-hidden');
 
@@ -37,9 +37,21 @@ const Navbar = () => {
           </Link>
         </p>
         <div className="hamburger-icon lg:hidden" onClick={activeState}>
-          <div className="line-one w-6 h-1 rounded-md mb-1 bg-black"></div>
-          <div className="line-two w-6 h-1 rounded-md mb-1 bg-black"></div>
-          <div className="line-three w-6 h-1 rounded-md mb-1 bg-black"></div>
+          <div
+            className={`line-one w-6 h-1 rounded-md mb-1 ${
+              mode === 'dark' ? 'bg-white' : 'bg-dark-blue-primary'
+            }`}
+          ></div>
+          <div
+            className={`line-one w-6 h-1 rounded-md mb-1 ${
+              mode === 'dark' ? 'bg-white' : 'bg-dark-blue-primary'
+            }`}
+          ></div>
+          <div
+            className={`line-one w-6 h-1 rounded-md mb-1 ${
+              mode === 'dark' ? 'bg-white' : 'bg-dark-blue-primary'
+            }`}
+          ></div>
         </div>
       </div>
       <div
@@ -101,7 +113,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div
-        className={`social-media ${hidden} lg:flex lg:h-auto mt-5  grow-0  lg:mt-0 `}
+        className={`social-media ${hidden} flex lg:h-auto mt-5  grow-0  lg:mt-0 `}
       >
         <Link href="https://www.linkedin.com/company/npe-digital/about/">
           <Image

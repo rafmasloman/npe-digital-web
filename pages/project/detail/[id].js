@@ -29,6 +29,7 @@ const Detail = () => {
       console.log('router tidak tersedia');
     }
   }, [isReady]);
+
   return (
     <div>
       <Navbar />

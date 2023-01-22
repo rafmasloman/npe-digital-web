@@ -9,6 +9,7 @@ const Teams = () => {
   return (
     <div className="teams container mx-auto w-auto">
       <Head>
+        <link rel="npe icon" href="/illustrations/logonpe.svg" />
         <title>
           Our Teams - Bangun Aplikasi anda dengan team yang berpengalaman di
           bidangnya
@@ -22,11 +23,12 @@ const Teams = () => {
 
       <Gap height="h-70px" />
       <div className="hero px-6 md:px-16 lg:px-100px">
-        <div className="hero-content  ">
+        <div className="hero-content   flex flex-col items-center ">
           <h1 className="text-2xl text-dark-blue-primary font-primary font-semibold  md:text-4xl lg:text-5xl xl:text-64px">
             <span className="text-blue-primary">NPE Digital</span> Team
           </h1>
-          <p className="text-gray-b1 text-xs font-secondary w-2/5  mt-2.5 mb-9 md:text-sm xl:text-base   ">
+          <Gap height="h-1.5" />
+          <p className="text-dark-blue-primary text-center font-primary w-full  lg:w-7/12  mt-2.5 mb-9  text-sm xl:text-base   ">
             Kami Tim NPE Digital hadir untuk menyediakan jasa layanan digital
             secara profesional dengan berbagai pengalaman kami dan pengembangan
             sumber daya manusia secara berkala untuk menciptakan tim yang

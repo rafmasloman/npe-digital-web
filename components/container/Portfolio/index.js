@@ -18,7 +18,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="company-portfolio flex flex-col items-center px-6 md:px-16 lg:px-100px">
+    <div className="company-portfolio flex flex-col items-center justify-center px-6 md:px-16 lg:px-100px">
       <div className="mb-10 lg:mb-70px">
         <h2 className="font-primary font-semibold text-2xl text-center text-dark-blue-primary mt-3 md:text-3xl lg:text-4xl xl:text-5xl">
           Company <span className="text-blue-primary">Portfolio</span>

@@ -9,6 +9,7 @@ const landingPage = async () => {
   console.log(result);
   return result;
 };
+
 const getProjects = async () => {
   const PUBLIC_API = process.env.NEXT_PUBLIC_API;
   const API_VERSION = 'api/v1';
@@ -16,6 +17,15 @@ const getProjects = async () => {
   const response = await axios.get(`${PUBLIC_API}/${API_VERSION}/${ENDPOINT}`);
   const result = response.data;
   return result.projects;
+};
+
+const getServices = async () => {
+  const PUBLIC_API = process.env.NEXT_PUBLIC_API;
+  const API_VERSION = 'api/v1';
+  const ENDPOINT = 'client/services';
+  const response = await axios.get(`${PUBLIC_API}/${API_VERSION}/${ENDPOINT}`);
+  const result = response.data;
+  return result.service;
 };
 
 const getTeams = async () => {
@@ -57,6 +67,17 @@ const getDetailProject = async (id) => {
   return result.project;
 };
 
+const getServicePage = async (name) => {
+  const PUBLIC_API = process.env.NEXT_PUBLIC_API;
+  const API_VERSION = 'api/v1';
+  const ENDPOINT = `client/service/${name}`;
+  const URL = `${PUBLIC_API}/${API_VERSION}/${ENDPOINT}`;
+
+  const response = await axios.get(`${PUBLIC_API}/${API_VERSION}/${ENDPOINT}`);
+  const result = response.data;
+  return result;
+};
+
 const getTestimonials = async () => {
   const PUBLIC_API = process.env.NEXT_PUBLIC_API;
   const API_VERSION = 'api/v1';
@@ -66,4 +87,11 @@ const getTestimonials = async () => {
   return result;
 };
 
-module.exports = { getProjects, getDetailProject, getTeams, getTestimonials };
+module.exports = {
+  getProjects,
+  getDetailProject,
+  getTeams,
+  getTestimonials,
+  getServices,
+  getServicePage,
+};

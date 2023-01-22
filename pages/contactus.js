@@ -12,12 +12,13 @@ const Contact = () => {
     <div className="container mx-auto">
       <div className="bg-contact-us-page bg-cover  bg-fixed bg-no-repeat bg-center w-full">
         <Head>
+          <link rel="npe icon" href="/illustrations/logonpe.svg" />
           <title>
             Contact NPE - Hubungi kami jika membutuhkan penjelasan langsung dari
             tim
           </title>
         </Head>
-        <Navbar />
+        <Navbar mode="dark" />
         <Gap height="h-70px" />
         <div className="hero  lg:flex px-6 md:px-16 lg:px-100px lg:flex-row ">
           <div className="hero-content ">
@@ -25,7 +26,7 @@ const Contact = () => {
               Contact us
             </h1>
             <Gap height="h-5 lg:h-30px" />
-            <p className="text-white text-base font-secondary w-full mt-2.5 mb-9 md:text-sm xl:text-base lg:w-3/5  ">
+            <p className="text-white text-base font-primary w-full mt-2.5 mb-9 md:text-sm xl:text-base lg:w-4/6  ">
               Jangan ragu untuk menghubungi kami jika Anda membutuhkan
               penjelasan yang lebih rinci langsung dari tim kami
             </p>

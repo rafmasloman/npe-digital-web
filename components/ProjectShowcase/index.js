@@ -58,7 +58,7 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
       </div>
     </div>
   ) : (
-    <div className="w-full mb-20">
+    <div className="w-full mb-20 ">
       {/* {projectList.projects.map((project) => {
         console.log(project);
       })} */}
@@ -66,8 +66,8 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
         src={imgUrl}
         alt="Project Showcase"
         width="1440"
-        height="0"
-        className="w-auto rounded-2xl"
+        height="1440"
+        className="w-full h-800px rounded-2xl"
       />
       <div className="project-content flex flex-col md:flex-row justify-between">
         <div className="container-text pt-5 w-fit flex-1">

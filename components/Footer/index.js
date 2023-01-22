@@ -6,11 +6,11 @@ import Gap from '../Gap';
 const Footer = () => {
   return (
     <div className="container mx-auto px-6 md:px-16 lg:px-100px lg:flex">
-      <div className="flex-initial w-3/5 ">
+      <div className="flex-initial w-full md:w-3/5 ">
         <h4 className="font-primary text-3xl font-semibold">
           NPE <span className="text-blue-primary">Digital</span>
         </h4>
-        <p className="font-secondary text-dark-blue-primary md:w-3/4 mt-2.5">
+        <p className="font-secondary text-dark-blue-primary w-full md:w-3/4 mt-2.5">
           Website yang menyedikan jasa membuat website,aplikasi dan lain-lain
           dengan tim yang berpengalaman
         </p>
