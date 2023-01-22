@@ -21,7 +21,6 @@ const Services = () => {
   return (
     <div className="services flex flex-col items-center px-6 md:px-16 lg:px-100px ">
       <div className="flex flex-col items-center">
-        {console.log(services)}
         <span className="font-primary text-lg text-gray-b1">Layanan kami</span>
         <h2 className="font-primary font-semibold text-2xl text-center text-dark-blue-primary mt-3 md:text-3xl lg:text-4xl xl:text-5xl">
           <span className="text-blue-primary">Layanan Terbaik</span> <br /> dari
@@ -33,7 +32,7 @@ const Services = () => {
           layanan teknologi yang akan digunakan.
         </p>
       </div>
-      <div className="all-service container flex flex-col lg:flex-row lg:justify-center  items-center w-full ">
+      <div className="all-service container flex flex-col xl:flex-row lg:justify-center  items-center w-full  ">
         {services.map((service) => {
           return (
             <ServiceCard

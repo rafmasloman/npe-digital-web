@@ -67,14 +67,14 @@ const ProjectShowcase = ({ name, desc, imgUrl, type, client, year, url }) => {
         alt="Project Showcase"
         width="1440"
         height="1440"
-        className="w-full h-800px rounded-2xl"
+        className="w-full md:h-400px lg:h-800px rounded-2xl"
       />
       <div className="project-content flex flex-col md:flex-row justify-between">
         <div className="container-text pt-5 w-fit flex-1">
           <h3 className="name  font-primary md:text-2xl lg:text-4xl font-semibold text-dark-blue-primary">
             {name}
           </h3>
-          <p className="description  text-sm lg:text-base md:w-1/2 lg:w-5/12 mt-2 text-gray-b1 font-secondary">
+          <p className="description  text-sm lg:text-base md:w-4/6 lg:w-7/12 mt-2 text-gray-b1 font-secondary">
             {desc}
           </p>
         </div>

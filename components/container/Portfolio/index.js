@@ -48,14 +48,7 @@ const Portfolio = () => {
         /> */}
       </div>
       <Gap height=" lg:h-100px" />
-      <Button
-        color="secondary"
-        text="Lihat Semua"
-        url="/projects"
-        action={(e) => {
-          console.log(e.target);
-        }}
-      />
+      <Button color="secondary" text="Lihat Semua" url="/projects" />
     </div>
   );
 };
